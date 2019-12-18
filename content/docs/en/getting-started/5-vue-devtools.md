@@ -43,6 +43,16 @@ Vue.use(VueDevtools)
 ```
 > Make sure you import devtools before Vue, otherwise it might not work as expected.
 
+Finally, if using an emulator, you will need to update your Android.manifest file's Application section to include the following line:
+```
+android:usesCleartextTraffic="true"
+```
+Then clear out the platforms directory by running: 
+```
+rm -rf platforms/
+```
+
+
 If you are using a real device instead of an emulator, set the `host` configuration option to point to the IP of your development machine. Otherwise, your device will not be able to connect to your host machine.
 
 ```JavaScript
